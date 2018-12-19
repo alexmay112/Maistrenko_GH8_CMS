@@ -1,0 +1,38 @@
+.navbar-nav {
+  @include media-breakpoint-up(xs) {
+    margin-top: 25px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
+}
+
+.navbar-nav .nav-item {
+  margin: 0 0 5px 0;
+  text-align: center;
+  @include media-breakpoint-up(lg) {
+    margin-left: 20px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  padding: 8px 20px;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  color: #000;
+  @include media-breakpoint-up(xs) {
+    display: inline-block;
+  }
+
+
+  &:hover {
+    border: 1px solid #626566;
+  }
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  border: 1px solid #626566;
+}

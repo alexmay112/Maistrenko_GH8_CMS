@@ -5,8 +5,14 @@
 
 @import 'base/basic';
 
+@import 'components/title-of-section';
+@import 'components/button';
+@import 'components/navigation';
+@import 'components/scrool-down';
+
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
+@import 'layout/section-promo';
 
 @import 'pages/home';
