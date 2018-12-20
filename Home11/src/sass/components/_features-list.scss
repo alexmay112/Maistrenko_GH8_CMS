@@ -1,0 +1,43 @@
+.features-list {
+  @include media-breakpoint-up(xs) {
+    margin-bottom: 50px;
+  }
+  @include media-breakpoint-up(md) {
+    margin-bottom: 110px;
+  }
+}
+
+.features-list-item {
+  max-width: 564px;
+
+  @include media-breakpoint-up(xs) {
+    margin-bottom: 50px;
+    padding-top: 120px;
+    text-align: center;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+  }
+  @include media-breakpoint-up(md) {
+    margin-bottom: 85px;
+    padding: 0 0 0 150px;
+    text-align: left;
+    background-position: 0 50%;
+  }
+
+
+  &.design {
+    background-image: url("../img/design-icon.png");
+  }
+
+  &.painting {
+    background-image: url("../img/painting-icon.png");
+  }
+
+  &.app {
+    background-image: url("../img/app-icon.png");
+  }
+
+  &.app-desk {
+    background-image: url("../img/app-desk-icon.png");
+  }
+}
