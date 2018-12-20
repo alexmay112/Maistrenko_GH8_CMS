@@ -8,5 +8,15 @@
 
   p {
     margin-bottom: 64px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+.section-about .section-title {
+  h2 {
+    color: #fff;
+  }
+  p {
+    color: $default-color-text;
   }
 }
