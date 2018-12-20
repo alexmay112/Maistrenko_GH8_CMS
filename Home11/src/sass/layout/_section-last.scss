@@ -1,0 +1,12 @@
+.section-last {
+  padding-top: 66px;
+  line-height: 36px;
+  font-weight: 300;
+  color: #a7acbc;
+  @include media-breakpoint-up(xs) {
+    min-height: 300px;
+  }
+  @include media-breakpoint-up(lg) {
+    min-height: 500px;
+  }
+}

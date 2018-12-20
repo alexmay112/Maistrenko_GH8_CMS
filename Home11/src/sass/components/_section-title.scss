@@ -12,10 +12,14 @@
     font-weight: 300;
   }
 }
+
 .section-about .section-title {
+  margin-top: 0;
+
   h2 {
     color: #fff;
   }
+
   p {
     color: $default-color-text;
   }
