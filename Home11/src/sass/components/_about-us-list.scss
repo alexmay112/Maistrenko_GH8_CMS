@@ -3,22 +3,19 @@
 }
 
 .about-us-list-item {
-  @include media-breakpoint-up(xs) {
-    margin-bottom: 60px;
-  }
+  margin-bottom: 60px;
 
   h3 {
     margin: 30px 0;
     font-family: 'Roboto', 'Arial', sans-serif;
     font-size: 24px;
-
     color: #fff;
   }
 
   p {
-    font-family: 'Proxima Nova', 'Arial', sans-serif;
     font-size: 18px;
-    font-weight: 300;
+    font-family: $font-light-main;
     color: $default-color-text;
+    line-height: 30px;
   }
 }

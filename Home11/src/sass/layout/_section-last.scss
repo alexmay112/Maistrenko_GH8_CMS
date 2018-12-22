@@ -1,11 +1,23 @@
 .section-last {
+  min-height: 300px;
   padding-top: 66px;
   line-height: 36px;
-  font-weight: 300;
+  font-family: $font-light-main;
+  font-size: 18px;
   color: #a7acbc;
-  @include media-breakpoint-up(xs) {
-    min-height: 300px;
+
+  h2 {
+    font-size: 18px;
   }
+
+  a {
+    color: #a7acbc;
+
+    span {
+      font-family: $font-bold-main;
+    }
+  }
+
   @include media-breakpoint-up(lg) {
     min-height: 500px;
   }

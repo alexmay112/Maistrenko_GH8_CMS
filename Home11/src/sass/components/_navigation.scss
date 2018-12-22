@@ -1,7 +1,5 @@
 .navbar-nav {
-  @include media-breakpoint-up(xs) {
-    margin-top: 25px;
-  }
+  margin-top: 25px;
   @include media-breakpoint-up(lg) {
     margin-top: 0;
   }
@@ -20,13 +18,10 @@
 
 .navbar-light .navbar-nav .nav-link {
   padding: 8px 20px;
+  display: inline-block;
   border: 1px solid transparent;
   border-radius: 100px;
   color: #000;
-  @include media-breakpoint-up(xs) {
-    display: inline-block;
-  }
-
 
   &:hover {
     border: 1px solid #626566;

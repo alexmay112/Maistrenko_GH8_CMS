@@ -1,3 +1,7 @@
+body {
+  font-family: 'Proxima Nova Regular', 'Arial', sans-serif;
+}
+
 input {
   border: none;
   box-sizing: border-box;
@@ -17,7 +21,8 @@ a {
 
   &:hover {
     text-decoration: none;
-    opacity: 0.9;
+    color: #fff;
+    opacity: 0.8;
     transition: 0.3s;
   }
 }
@@ -30,23 +35,8 @@ li {
   list-style: none;
 }
 
-//.clearfix:after {
-//  content: '';
-//  display: block;
-//  clear: both;
-//}
-
-body {
-  font-family: 'Arial', sans-serif;
-  //color: $default-color-text;
-}
-
 .container {
   @include respond-to('huge') {
     max-width: 1350px;
   }
-
-  //max-width: 1170px;
-  //margin: 0 auto;
-  //padding: 0 15px;
 }

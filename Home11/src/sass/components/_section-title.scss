@@ -2,14 +2,21 @@
   margin: 100px 0;
 
   h2 {
+    font-family: $font-bold-main;
     text-align: center;
     font-size: 48px;
   }
 
   p {
     margin-bottom: 64px;
+    font-family: $font-light-main;
     font-size: 18px;
-    font-weight: 300;
+  }
+}
+
+.section-promo .section-title {
+  p {
+    color: $default-color-text;
   }
 }
 
@@ -21,6 +28,7 @@
   }
 
   p {
+    margin-bottom: 0;
     color: $default-color-text;
   }
 }

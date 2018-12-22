@@ -3,11 +3,12 @@
 }
 
 .carousel-list-item {
+  max-width: 641px;
   padding: 0;
   position: relative;
 }
 
-.inner-box {
+.hover-box {
   opacity: 0;
   transition: 0.5s;
   width: 100%;
@@ -23,16 +24,22 @@
   }
 
   h2 {
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 22px;
+    font-family: $font-bold-main;
+    @include media-breakpoint-up(sm) {
+      font-size: 30px;
+    }
   }
 
   p {
     max-width: 387px;
-    margin-bottom: 64px;
-    font-family: "Proxima Nova", Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 300;
+    margin: 0 auto 10px auto;
+    font-family: $font-light-main;
+    font-size: 14px;
     line-height: 24px;
+    @include media-breakpoint-up(sm) {
+      font-size: 16px;
+      margin: 0 auto 64px auto;
+    }
   }
 }
