@@ -23,8 +23,6 @@
   function funcCos () {
     let num = +prompt('Введіть величину кута в радіанах', 1)
     let result = Math.cos(num)
-    // alert('Косинус кута ' + num + ' становить: ' +
-    //   Math.round(result * 10000) / 10000)
     viewer.innerHTML = +result
   }
 
