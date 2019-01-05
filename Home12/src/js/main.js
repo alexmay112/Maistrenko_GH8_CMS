@@ -1,3 +1,4 @@
+'use strict'
 ;(function () {
   let viewer = document.getElementById('viewer')
 
