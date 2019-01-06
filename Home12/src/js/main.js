@@ -41,8 +41,13 @@
 
   function funcSqrt () {
     let num = +prompt('Введіть число', 1)
-    let result = Math.sqrt(num)
-    viewer.innerHTML = +result
+    if (num < 0) {
+      viewer.innerHTML = '0'
+      alert('Корінь від\'ємного числа не існує!')
+    } else {
+      let result = Math.sqrt(num)
+      viewer.innerHTML = +result
+    }
   }
 
   let buttonSqrt = document.getElementById('sqrt')
