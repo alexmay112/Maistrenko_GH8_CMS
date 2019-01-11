@@ -1,126 +1,41 @@
-'use strict'
-;(function () {
-  let viewer = document.getElementById('viewer')
+$(document).ready(function () {
 
-  function factorial () {
-    let num = +prompt('Введіть число', 1)
+  $('a').click(function (event) {
+    event.preventDefault()
+  })
 
-    function sFact (num) {
-      let rval = 1
-      for (let i = 2; i <= num; i++) {
-        rval = rval * i
-      }
-      return rval
-    }
-
-    let result = sFact(num)
-    viewer.innerHTML = +result
-  }
-
-  let buttonFact = document.getElementById('factorial')
-  buttonFact.addEventListener('click', factorial, false)
-
-  function funcCos () {
-    let num = +prompt('Введіть величину кута в радіанах', 1)
-    let result = Math.cos(num)
-    viewer.innerHTML = +result
-  }
-
-  let buttonCos = document.getElementById('cos')
-  buttonCos.addEventListener('click', funcCos, false)
-
-  function funcSin () {
-    let num = +prompt('Введіть величину кута в радіанах', 1)
-    let result = Math.sin(num)
-    viewer.innerHTML = +result
-
-  }
-
-  let buttonSin = document.getElementById('sin')
-  buttonSin.addEventListener('click', funcSin, false)
-
-  function funcSqrt () {
-    let num = +prompt('Введіть число', 1)
-    if (num < 0) {
-      viewer.innerHTML = '0'
-      alert('Корінь від\'ємного числа не існує!')
+  $('.add-new-task').on('click', function () {
+    let newTaskName = prompt('Enter new task name', 'Another new task')
+    if (newTaskName === '' || newTaskName === ' ') {
+      alert('Name of task must be filled.')
     } else {
-      let result = Math.sqrt(num)
-      viewer.innerHTML = +result
+      $('.to-do-list').append(`
+  <li class="to-do-item list-group-item">
+    <a href="#" class="task-name">${newTaskName}</a>
+    <a href="#" class="edit-task">rename</a>
+    <a href="#" class="delete-task">del</a>
+  </li>`)
+      localStorage.setItem('nameOfTask','4654987')
     }
-  }
+  })
 
-  let buttonSqrt = document.getElementById('sqrt')
-  buttonSqrt.addEventListener('click', funcSqrt, false)
+  $('.container').on('click', '.to-do-item', function () {
+    $(this).find('.edit-task, .delete-task').toggleClass('show')
+  })
 
-  function funcPlus () {
-    let num1 = +prompt('Введіть число', 1)
-    let num2 = +prompt('Введіть число', 1)
-    let result = num1 + num2
-    viewer.innerHTML = +result
-  }
-
-  let buttonPlus = document.getElementById('plus')
-  buttonPlus.addEventListener('click', funcPlus, false)
-
-  function funcMinus () {
-    let num1 = +prompt('Введіть число', 1)
-    let num2 = +prompt('Введіть число', 1)
-    let result = num1 - num2
-    viewer.innerHTML = +result
-  }
-
-  let buttonMinus = document.getElementById('minus')
-  buttonMinus.addEventListener('click', funcMinus, false)
-
-  function funcTimes () {
-    let num1 = +prompt('Введіть число', 1)
-    let num2 = +prompt('Введіть число', 1)
-    let result = num1 * num2
-    viewer.innerHTML = +result
-  }
-
-  let buttonTime = document.getElementById('times')
-  buttonTime.addEventListener('click', funcTimes, false)
-
-  function funcDivision () {
-    let num1 = +prompt('Введіть число', 1)
-    let num2 = +prompt('Введіть число', 1)
-    let result = num1 / num2
-    viewer.innerHTML = +result
-  }
-
-  let buttonDivision = document.getElementById('division')
-  buttonDivision.addEventListener('click', funcDivision, false)
-
-  function funcPow () {
-    let num1 = +prompt('Введіть число', 1)
-    let num2 = +prompt('Введіть степінь', 1)
-
-    function pow (num1, num2) {
-      let res = num1
-      for (let i = 1; i <= (num2 - 1); i++) {
-        res = res * num1
-      }
-      if (num1 === 0 && num2 === 0) {
-        res = 1
-        return res
-      }
-      return res
+  $('.container').on('click', '.edit-task', function () {
+    let newTaskName = prompt('Edit task name', 'Another new task')
+    if (newTaskName === '' || newTaskName === ' ') {
+      alert('Name of task must be filled.')
+    } else {
+      $(this).parent().find('.task-name').text(newTaskName)
     }
+  })
 
-    let result = pow(num1, num2)
-    viewer.innerHTML = +result
-  }
-
-  let buttonPow = document.getElementById('pow')
-  buttonPow.addEventListener('click', funcPow, false)
-
-  function funcClear () {
-    document.getElementById('viewer').innerHTML = '0'
-  }
-
-  let ce = document.getElementById('ce')
-  ce.addEventListener('click', funcClear, false)
-
-}())
+  $('.container').on('click', '.delete-task', function () {
+    let answer = confirm('This will delete current task. Are you sure?')
+    if (answer) {
+      $(this).parent().remove()
+    }
+  })
+})

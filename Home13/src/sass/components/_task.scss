@@ -1,0 +1,40 @@
+.to-do-item {
+  font-size: 22px;
+  line-height: 40px;
+
+  &:hover {
+    background-color: #d7ffdb;
+  }
+}
+
+.task-name {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.edit-task {
+  display: none;
+  padding: 1px 5px;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: #9fcdff;
+    text-decoration: none;
+  }
+}
+
+.delete-task {
+  display: none;
+  padding: 1px 5px;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: #bd2130;
+    text-decoration: none;
+  }
+}
+
+.show {
+  display: inline-block;
+}
