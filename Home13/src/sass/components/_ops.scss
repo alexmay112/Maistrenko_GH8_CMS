@@ -1,0 +1,23 @@
+.ops {
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #626262;
+  background-color: #9fcdff;
+
+  &:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #6cacc5;
+  }
+}
+
+#viewer {
+  border: 1px solid #9fcdff;
+  font-size: 20px;
+}
+#ce:hover {
+  background-color: #bd2130;
+}
