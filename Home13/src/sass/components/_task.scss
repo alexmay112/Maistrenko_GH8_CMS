@@ -1,9 +1,12 @@
 .to-do-item {
   font-size: 22px;
-  line-height: 40px;
 
   &:hover {
     background-color: #d7ffdb;
+
+    .edit-task, .delete-task {
+      display: inline-block;
+    }
   }
 }
 
@@ -17,6 +20,7 @@
   display: none;
   padding: 1px 5px;
   border-radius: 2px;
+  font-size: 16px;
 
   &:hover {
     background-color: #9fcdff;
@@ -28,6 +32,7 @@
   display: none;
   padding: 1px 5px;
   border-radius: 2px;
+  font-size: 16px;
 
   &:hover {
     background-color: #bd2130;

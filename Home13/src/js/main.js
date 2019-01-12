@@ -15,13 +15,12 @@ $(document).ready(function () {
     <a href="#" class="edit-task">rename</a>
     <a href="#" class="delete-task">del</a>
   </li>`)
-      localStorage.setItem('nameOfTask','4654987')
     }
   })
 
-  $('.container').on('click', '.to-do-item', function () {
-    $(this).find('.edit-task, .delete-task').toggleClass('show')
-  })
+  // $('.container').on('click', '.to-do-item', function () {
+  //   $(this).find('.edit-task, .delete-task').toggleClass('show')
+  // })
 
   $('.container').on('click', '.edit-task', function () {
     let newTaskName = prompt('Edit task name', 'Another new task')
