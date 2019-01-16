@@ -4,3 +4,7 @@ $breakpoints: (
   'huge': (min-width: 1200px),
   'large-huge': (min-width: 1025px) and (max-width: 1200px),
 );
+$default-color-text: #949494;
+$font-light-main: 'Proxima Nova Light', 'Arial', sans-serif;
+$font-regular-main: 'Proxima Nova Regular', 'Arial', sans-serif;
+$font-bold-main: 'Proxima Nova Bold', 'Arial', sans-serif;

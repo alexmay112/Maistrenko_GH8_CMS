@@ -4,6 +4,22 @@
 @import 'utils/mixins';
 
 @import 'base/basic';
+@import 'base/typography';
 
+@import 'components/section-title';
 @import 'components/button';
-@import 'components/task';
+@import 'components/navigation';
+@import 'components/scrool-down';
+@import 'components/section-twin-list';
+@import 'components/features-list';
+@import 'components/about-us-list';
+@import 'components/carousel-list';
+@import 'components/google-map-frame';
+
+@import 'layout/header';
+@import 'layout/section-promo';
+@import 'layout/section-twin';
+@import 'layout/section-features';
+@import 'layout/section-about';
+@import 'layout/section-map';
+@import 'layout/section-last';

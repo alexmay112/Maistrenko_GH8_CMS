@@ -1,3 +1,42 @@
 body {
-  padding-top: 30px;
+  font-family: 'Proxima Nova Regular', 'Arial', sans-serif;
+}
+
+input {
+  border: none;
+  box-sizing: border-box;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+a {
+  color: #fff;
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  @include respond-to('huge') {
+    max-width: 1350px;
+  }
 }

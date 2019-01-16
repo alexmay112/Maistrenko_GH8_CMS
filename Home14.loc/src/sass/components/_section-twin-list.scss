@@ -1,0 +1,36 @@
+.section-twin-list {
+  min-height: 520px;
+  margin-bottom: 0;
+}
+
+.section-twin-item {
+  margin: 30px 0;
+  color: #fff;
+  font-weight: 300;
+  text-align: center;
+
+  h2 {
+    font-size: 48px;
+    font-family: $font-light-main;
+
+    span {
+      font-family: $font-bold-main;
+    }
+  }
+
+  p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-family: $font-light-main;
+    line-height: 30px;
+
+    &.container {
+      max-width: 571px;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    margin: 0;
+    text-align: left;
+  }
+}
