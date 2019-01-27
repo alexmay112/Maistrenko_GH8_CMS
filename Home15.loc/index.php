@@ -35,9 +35,9 @@ function sortArr($unSortList)
     for ($i = 0; $i < count($unSortList); $i++) {
         for ($j = 0; $j < count($sort); $j++) {
             if (!isset($sort[$j + 1]) && $unSortList[$i] > $sort[$j]) {
-                array_push($sort, $unSortList[$i]);
+                $sort[] = $unSortList[$i];
             } else {
-                array_unshift($sort, $unSortList[$i]);
+                array_splice($sort, $j - 1, 0, $unSortList[$i]);
             }
             if ($unSortList[$i] > $sort[$j] && $unSortList[$i] < $sort[$j + 1]) {
                 array_splice($sort, $j, 0, $unSortList[$i]);
