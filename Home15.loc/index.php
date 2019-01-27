@@ -28,14 +28,16 @@
 //
 //$res = sortArr($unSortList);
 //print_r($res);
-$unSortList = [3, 15, 59, 2, 23, 45, 7, 18, 2, 10, 33, 17];
+$unSortList = [3, 15, 59, 2, 23];
 function sortArr($unSortList)
 {
-    $sort = [];
+    $sort[0] = $unSortList[0];
     for ($i = 0; $i < count($unSortList); $i++) {
         for ($j = 0; $j < count($sort); $j++) {
             if (!isset($sort[$j + 1]) && $unSortList[$i] > $sort[$j]) {
                 array_push($sort, $unSortList[$i]);
+            } else {
+                array_unshift($sort, $unSortList[$i]);
             }
             if ($unSortList[$i] > $sort[$j] && $unSortList[$i] < $sort[$j + 1]) {
                 array_splice($sort, $j, 0, $unSortList[$i]);
@@ -45,6 +47,7 @@ function sortArr($unSortList)
     print_r($unSortList);
     print_r($sort);
 }
+
 sortArr($unSortList);
 ?>
 
