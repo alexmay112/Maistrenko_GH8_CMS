@@ -32,11 +32,8 @@ $unSortList = [3, 15, 59, 2, 23];
 function sortArr($unSortList)
 {
     $sort[0] = $unSortList[0];
-//    echo $sort[0];
-    for ($i = 0; $i < count($unSortList); $i++) {
-//        echo $unSortList[$i];
+    for ($i = 1; $i < count($unSortList); $i++) {
         for ($j = 1; $j < count($sort); $j++) {
-            echo $sort[$j];
             if (count($sort) === 1 && $unSortList[$i] > $sort[$j]) {
                 $sort[] = $unSortList[$i];
             } elseif (count($sort) === 1 && $unSortList[$i] < $sort[$j]) {
