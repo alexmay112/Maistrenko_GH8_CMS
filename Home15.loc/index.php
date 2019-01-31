@@ -9,12 +9,27 @@
 
 <?php
 
-$arr = [3, 15, 59, 2, 23];
 
-function sortArr ($arr) {
-    for($i=0; $i<count($arr); $i++){
-        for($j=$i+1; $j<count($arr); $j++){
-            if($arr[$i]>$arr[$j]){
+//function sortArr ($arr) {
+//    for($i=0; $i<count($arr); $i++){
+//        for($j=$i+1; $j<count($arr); $j++){
+//            if($arr[$i]>$arr[$j]){
+//                $temp = $arr[$j];
+//                $arr[$j] = $arr[$i];
+//                $arr[$i] = $temp;
+//            }
+//        }
+//    }
+//    print_r($arr);
+//}
+//sortArr($arr);
+
+$arr = [15, 3, 59, 2, 23];
+function sortArr($arr)
+{
+    for ($i = 0; $i < count($arr); $i++) {
+        for ($j = $i + 1; $j < count($arr); $j++) {
+            if ($arr[$i] > $arr[$j]) {
                 $temp = $arr[$j];
                 $arr[$j] = $arr[$i];
                 $arr[$i] = $temp;
@@ -24,40 +39,8 @@ function sortArr ($arr) {
     print_r($arr);
 }
 
-sortArr($arr)
+sortArr($arr);
 
-
-
-
-
-
-
-
-
-
-//function sortArr($unSortList)
-//{
-//    $sort[0] = $unSortList[0];
-//    for ($i = 1; $i < count($unSortList); $i++) {
-//        for ($j = 1; $unSortList[$i] > $sort[$j] && $unSortList[$i] < $sort[$j + 1]; $j++) {
-//
-//
-//            if (!isset($sort[$j + 1]) && $unSortList[$i] > $sort[$j]) {
-//                $sort[] = $unSortList[$i];
-//            } elseif (!isset($sort[$j + 1]) && $unSortList[$i] < $sort[$j]) {
-//                array_unshift($sort, $unSortList[$i]);
-//            } elseif ($unSortList[$i] > $sort[$j] && $unSortList[$i] < $sort[$j + 1]) {
-//                array_splice($sort, $j, 0, $unSortList[$i]);
-//            } else {
-//                array_splice($sort, $j - 1, 0, $unSortList[$i]);
-//            }
-//        }
-//    }
-//    print_r($unSortList);
-//    print_r($sort);
-//}
-//
-//sortArr($unSortList);
 
 ?>
 
