@@ -219,7 +219,7 @@ if ($result->num_rows > 0) {
 echo "<br>";
 //fourth task
 echo "4. Get all variable name that has cache word(cache_akjsgdkjag) but not (cache)(see variable table)" . "<br>";
-$sql = "SELECT name FROM `variable` WHERE `name` LIKE 'cache!_%' ESCAPE '!'";
+$sql = "SELECT DISTINCT name FROM `variable` WHERE `name` LIKE 'cache!_%' ESCAPE '!'";
 $result = $conn->query($sql);;
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
