@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Registration form</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -154,7 +155,7 @@ if ($conn->connect_error) {
 
 $sql = "SELECT id, username, email, password, confirm_password, first_name, last_name, age, gender FROM users";
 $result = $conn->query($sql);
-echo "Results for Home work 16 part one"."<br>";
+echo "Results for Home work 16 part one" . "<br>";
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "id: " . $row["id"] . " • User: " . $row["username"] . " • Email: " . $row["email"] .
@@ -190,7 +191,7 @@ if ($result->num_rows > 0) {
 echo "<br>";
 //second task
 echo "2. Get nodes where type is delivery and all that made in october and title begins with 8046" . "<br>";
-$sql = "SELECT title, type, created FROM `node` WHERE type = 'delivery' AND title LIKE '8046%' AND created BETWEEN 1538352000 AND 1541030399";
+$sql = "SELECT title, type, created FROM `node` WHERE type = 'delivery' AND title LIKE '8046%' AND DATE_FORMAT(FROM_UNIXTIME(created), '%M') = 'October'";
 $result = $conn->query($sql);;
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
@@ -205,10 +206,10 @@ echo "3. Get user name and nodes that where published by user 'serhiy'(output us
 $sql = "SELECT node.nid, node.title, users.name, users.mail 
 FROM node 
 LEFT JOIN users ON node.uid = users.uid
-WHERE users.uid = 3
+WHERE users.name = 'serhiy'
 ORDER BY node.created DESC
 LIMIT 20";
-$result = $conn->query($sql);;
+$result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo " • Node ID " . $row["nid"] . " • Node title " . $row["title"] . " • User name " . $row["name"] . " • User mail " . $row["mail"] . "<br>";
@@ -219,7 +220,8 @@ if ($result->num_rows > 0) {
 echo "<br>";
 //fourth task
 echo "4. Get all variable name that has cache word(cache_akjsgdkjag) but not (cache)(see variable table)" . "<br>";
-$sql = "SELECT DISTINCT name FROM `variable` WHERE `name` LIKE 'cache!_%' ESCAPE '!'";
+//$sql = "SELECT DISTINCT name FROM `variable` WHERE `name` LIKE 'cache!_%' ESCAPE '!'";
+$sql = "SELECT DISTINCT name FROM `variable` WHERE `name` LIKE '%cache%' AND `name` != 'cache'";
 $result = $conn->query($sql);;
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
