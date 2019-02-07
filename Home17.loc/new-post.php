@@ -1,5 +1,8 @@
 <?php
 session_start();
+$date = getdate();
+$date = date("Y-m-d H:i:s");
+
 if (isset($_SESSION['username'])) {
     echo "Вы вошли как: " . $_SESSION['username'] . " ";
     echo "<a href='logout.php'>Выйти</a>";
@@ -41,7 +44,8 @@ if (isset($_SESSION['username'])) {
                 </div>
                 <div class="form-group">
                     <input type="text" name="created" class="form-control"
-                           id="inputCreated" value="" hidden>
+                           id="inputCreated" value=""
+                           hidden>
                 </div>
                 <input type="submit" class="btn btn-primary" value="Post">
             </form>
@@ -70,7 +74,7 @@ if (isset($_POST['title'], $_POST['bodyPost'])) {
 
     $sql = "
 INSERT INTO posts (username, title, body, created)
-VALUES ('$user', '$title', '$bodyPost', '$created')";
+VALUES ('$user', '$title', '$bodyPost', NOW())";
     $result = $conn->query($sql);
     if ($result) {
         echo "Пост успешно добавлен";

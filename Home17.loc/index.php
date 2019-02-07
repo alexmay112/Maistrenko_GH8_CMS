@@ -26,12 +26,8 @@ if (isset($_POST['username'], $_POST['password'])) {
 
     $sql = "SELECT username, password FROM users WHERE username = '$user' AND password = '$password'";
     $result = $conn->query($sql);
-//    var_dump($result);
 
     if ($result->num_rows > 0) {
-//        while ($row = $result->fetch_assoc()) {
-//            echo " • User: " . $row["username"] . " • Password: " . $row["password"] . "<br><br>";
-//        }
         $_SESSION['username'] = $user;
         echo "Вы вошли как: ". $user;
         echo "<a href='logout.php'> Выйти</a>";
@@ -47,13 +43,11 @@ if (isset($_POST['username'], $_POST['password'])) {
             <h1>Log in</h1>
             <form action="" method="POST">
                 <div class="form-group">
-                    <label for="inputUsername">Username</label>
                     <input type="text" name="username" class="form-control"
                            id="inputUsername"
                            placeholder="Enter Username" required>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword">Password</label>
                     <input type="password" name="password"
                            class="form-control"
                            id="inputPassword" placeholder="Password"
