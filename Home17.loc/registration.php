@@ -12,7 +12,7 @@ if (isset($_SESSION['username'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home17</title>
+    <title>Reg</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -76,27 +76,22 @@ VALUES ('$user', '$email', '$password', '$first_name',
                 or <br><a href="index.php" class="btn btn-primary">Log in</a>
                 <form action="" method="POST">
                     <div class="form-group">
-                        <label for="inputUsername">Username</label>
                         <input type="text" name="username" class="form-control"
                                id="inputUsername"
                                placeholder="Enter Username" required>
                     </div>
                     <div class="form-group">
-                        <label for="inputEmail">Email address</label>
                         <input type="email" name="email" class="form-control"
                                id="inputEmail"
                                placeholder="Enter email" required>
                     </div>
                     <div class="form-group">
-                        <label for="inputPassword">Password</label>
                         <input type="password" name="password"
                                class="form-control"
                                id="inputPassword" placeholder="Password"
                                required>
                     </div>
                     <div class="form-group">
-                        <label for="inputConfirmPassword">Confirm
-                            Password</label>
                         <input type="password" name="confirm-password"
                                class="form-control"
                                id="inputConfirmPassword"
@@ -105,20 +100,17 @@ VALUES ('$user', '$email', '$password', '$first_name',
                     <div class="text-danger" id="validate-status" role="alert">
                     </div>
                     <div class="form-group">
-                        <label for="inputFirstName">First name</label>
                         <input type="text" name="first-name"
                                class="form-control"
                                id="inputFirstName"
                                placeholder="Enter First name">
                     </div>
                     <div class="form-group">
-                        <label for="inputLastName">Last name</label>
                         <input type="text" name="last-name" class="form-control"
                                id="inputLastName"
                                placeholder="Enter Last name">
                     </div>
                     <div class="form-group">
-                        <label for="inputAge">Age</label>
                         <input type="number" name="age" min="7"
                                class="form-control"
                                id="inputAge" placeholder="Enter age">

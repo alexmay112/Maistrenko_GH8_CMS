@@ -36,13 +36,14 @@ if (isset($_POST['username'], $_POST['password'])) {
         echo "Вы вошли как: ". $user;
         echo "<a href='logout.php'> Выйти</a>";
     } else {
-        echo "Такой пользователь не найден" . "<br><br>";
+        echo "Логин или пароль неправильный" . "<br><br>";
     }
     $conn->close();
 } ?>
 <div class="container">
     <div class="row">
         <div class="col-sm-8 col-md-4 m-auto form-block">
+            <a href="new-post.php">Добавить новый пост</a>
             <h1>Log in</h1>
             <form action="" method="POST">
                 <div class="form-group">
