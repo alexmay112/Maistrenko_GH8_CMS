@@ -1,46 +1,53 @@
 <?php
 session_start();
-if (isset($_SESSION['username'])) {
-    echo "Вы вошли как: " . $_SESSION['username']." ";
-    echo "<a href='logout.php'>Выйти</a>";
-} else {
-    echo "Вы не вошли в систему.";
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home17</title>
+    <title>Login page</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-<?php
-require_once('connect.php');
-if (isset($_POST['username'], $_POST['password'])) {
-
-    $user = $_POST['username'];
-    $user = $conn->real_escape_string($user);
-    $password = sha1($_POST['password']);
-
-    $sql = "SELECT username, password FROM users WHERE username = '$user' AND password = '$password'";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        $_SESSION['username'] = $user;
-        echo "Вы вошли как: ". $user;
-        echo "<a href='logout.php'> Выйти</a>";
-    } else {
-        echo "Логин или пароль неправильный" . "<br><br>";
-    }
-    $conn->close();
-} ?>
 <div class="container">
     <div class="row">
         <div class="col-sm-8 col-md-4 m-auto form-block">
-            <a href="new-post.php">Добавить новый пост</a>
-            <h1>Log in</h1>
+            <?php
+            require_once('connect.php');
+            if (isset($_SESSION['username'])) {
+                echo "Вы вошли как: " . $_SESSION['username'] . " " . "<a href='logout.php'>Выйти</a>";
+            } else {
+                echo "Вы не вошли в систему." . "<br>";
+            }
+            if (isset($_POST['username'], $_POST['password'])) {
+
+                $user = $_POST['username'];
+                $user = $conn->real_escape_string($user);
+                $password = sha1($_POST['password']);
+
+                $sql = "SELECT username, password FROM users WHERE username = '$user' AND password = '$password'";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows === 1) {
+                    $row = $result->fetch_assoc();
+                    if ($row['password'] === $password && $row['username'] === $user) {
+                        $_SESSION['username'] = $user;
+                        echo "Вы вошли как: " . $_SESSION['username'] . " " . "<a href='logout.php'>Выйти</a>";
+                    }
+                } else {
+                    echo "Логин или пароль неправильный" . "<br><br>";
+                }
+                $conn->close();
+            }
+            if (isset($_SESSION['username'])) {
+                echo "<br><a href='new-post.php'>Добавить новый пост</a>";
+                echo "<br><a href='myposts.php'>История постов</a>";
+            }
+
+            ?>
+
+            <h1>Вход</h1>
             <form action="" method="POST">
                 <div class="form-group">
                     <input type="text" name="username" class="form-control"

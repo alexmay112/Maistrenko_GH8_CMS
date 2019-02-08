@@ -1,13 +1,5 @@
 <?php
 session_start();
-require_once('connect.php');
-if (isset($_SESSION['username'])) {
-    echo "Вы вошли как: " . $_SESSION['username'] . " ";
-    echo "<a href='logout.php'>Выйти</a>";
-} else {
-    echo "Вы не вошли в систему.";
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +14,17 @@ if (isset($_SESSION['username'])) {
 <div class="container">
     <div class="row">
         <div class="col-6">
+            <?php
+            require_once('connect.php');
+            if (isset($_SESSION['username'])) {
+                echo "Вы вошли как: " . $_SESSION['username'] . " ";
+                echo "<a href='logout.php'>Выйти</a>";
+            } else {
+                echo "Вы не вошли в систему.";
+            }
+            ?>
+            <p><a href='new-post.php'>Добавить новый пост</a></p>
+            <p><a href="/">На главную</a></p>
             <h1>Мои посты</h1>
             <?php
             $user = $_SESSION['username'];
@@ -32,7 +35,7 @@ if (isset($_SESSION['username'])) {
                     echo "<h2>" . $row["title"] . "</h2>" . "<br>" . "<p>". $row["body"]."</p>" . "<br>" . "Создан: " . $row["created"] . "<br>";
                 }
             } else {
-                echo "0 results for Home work part one" . "<br><br>";
+                echo "У Вас пока нет постов" . "<br><br>";
             }
             ?>
         </div>
