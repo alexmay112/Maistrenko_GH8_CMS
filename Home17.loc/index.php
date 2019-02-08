@@ -21,11 +21,9 @@ session_start();
                 echo "Вы не вошли в систему." . "<br>";
             }
             if (isset($_POST['username'], $_POST['password'])) {
-
                 $user = $_POST['username'];
                 $user = $conn->real_escape_string($user);
                 $password = sha1($_POST['password']);
-
                 $sql = "SELECT username, password FROM users WHERE username = '$user' AND password = '$password'";
                 $result = $conn->query($sql);
 
@@ -36,7 +34,7 @@ session_start();
                         echo "Вы вошли как: " . $_SESSION['username'] . " " . "<a href='logout.php'>Выйти</a>";
                     }
                 } else {
-                    echo "Логин или пароль неправильный" . "<br><br>";
+                    echo "<p class='text-danger'>Логин или пароль неправильный</p>" . "<br><br>";
                 }
                 $conn->close();
             }
@@ -44,9 +42,7 @@ session_start();
                 echo "<br><a href='new-post.php'>Добавить новый пост</a>";
                 echo "<br><a href='myposts.php'>История постов</a>";
             }
-
             ?>
-
             <h1>Вход</h1>
             <form action="" method="POST">
                 <div class="form-group">

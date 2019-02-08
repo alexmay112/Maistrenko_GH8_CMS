@@ -10,7 +10,6 @@ session_start();
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-
 <div class="container">
     <div class="row">
         <div class="col-6">
@@ -41,8 +40,6 @@ session_start();
         </div>
     </div>
 </div>
-
-
 <script src="assets/js/libs.js"></script>
 <script src="assets/js/main.js"></script>
 </body>

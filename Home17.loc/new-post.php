@@ -10,7 +10,6 @@ session_start();
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-
 <div class="container">
     <div class="row">
         <div class="col-sm-8 col-md-4 m-auto form-block">
@@ -27,12 +26,10 @@ session_start();
             <form action="" method="POST">
                 <div class="form-group">
                     <input type="text" name="username" class="form-control"
-                           id="inputUsername"
                            value="<?php echo $_SESSION['username'] ?>" hidden>
                 </div>
                 <div class="form-group">
                     <input type="text" name="title" class="form-control"
-                           id="inputTitle"
                            placeholder="Название поста" required>
                 </div>
                 <div class="form-group">
@@ -50,14 +47,12 @@ session_start();
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
-
                 $user = $_POST['username'];
                 $user = $conn->real_escape_string($user);
                 $title = $_POST['title'];
                 $title = $conn->real_escape_string($title);
                 $bodyPost = $_POST['bodyPost'];
                 $bodyPost = $conn->real_escape_string($bodyPost);
-
                 $sql = "
                 INSERT INTO posts (username, title, body, created)
                 VALUES ('$user', '$title', '$bodyPost', NOW())";
@@ -69,14 +64,11 @@ session_start();
                     echo "<p class='text-danger'>Ошибка добавления поста</p>";
                 } ?>
             <?php } ?>
-
             or <br><a href="registration.php" class="btn btn-primary">Registration</a><br>
             or <br><a href="index.php" class="btn btn-primary">Log in</a>
         </div>
     </div>
 </div>
-
-
 <script src="assets/js/libs.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
