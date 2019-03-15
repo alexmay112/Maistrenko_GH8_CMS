@@ -1,0 +1,20 @@
+// Styles for blocks.
+// -----------------------------------------------------------------------------
+.soc-icons p {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  right: 10px;
+  top: -50px;
+
+  a {
+    margin-left: 20px;
+    color: #362f2f;
+    font-size: 22px;
+    font-weight: 400;
+    &:hover {
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+  }
+}

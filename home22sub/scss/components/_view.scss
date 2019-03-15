@@ -1,0 +1,98 @@
+// Styles for Views
+// -----------------------------------------------------------------------------
+.view-post-teaser-view .item-list .teaser-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  li {
+    max-width: 360px;
+    margin: 0 0 20px 0;
+    color: #fff;
+    background-color: #362f2f;
+
+    &:hover {
+      transform: scale(1.01);
+      transition: 0.8s;
+    }
+
+    .views-field-title {
+      padding: 32px 10px 17px;
+      font-size: 26px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .views-field-body {
+      padding: 0 10px;
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    .views-field-field-button {
+      text-transform: uppercase;
+
+      .field-content div {
+        text-align: center;
+      }
+
+      a {
+        margin: 40px auto;
+        padding: 10px 60px;
+        display: inline-block;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        background-color: #c3a000;
+
+        &:hover {
+          opacity: 0.8;
+          transition: 0.3s;
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .views-field-field-published-date {
+      padding: 5px 10px;
+      display: inline-block;
+    }
+
+    .views-field-field-comment-amount {
+      padding: 5px 10px;
+      display: inline-block;
+      float: right;
+    }
+  }
+
+  .views-row-even {
+    background-color: #000;
+  }
+}
+
+.pagination.pager {
+  .pager-current.active span {
+    color: #c3a000;
+
+    &:hover {
+      background-color: #362f2f;
+    }
+  }
+
+  li span {
+    background-color: #362f2f;
+  }
+
+  a {
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #362f2f;
+
+    &:hover {
+      color: #c3a000;
+      background-color: #362f2f;
+    }
+  }
+}

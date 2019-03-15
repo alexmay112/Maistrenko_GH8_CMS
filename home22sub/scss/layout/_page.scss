@@ -1,0 +1,28 @@
+// Page Layout
+// -----------------------------------------------------------------------------
+#logo {
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -68%);
+  float: none;
+  z-index: 998;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.pull-right a {
+  padding: 15px 19px;
+  background-color: #362f2f;
+
+  &:hover .fa-angle-up {
+    color: #c3a000;
+  }
+
+  .fa-angle-up {
+    color: #fff;
+  }
+}
