@@ -1,0 +1,29 @@
+.main-btn {
+  padding: 21px 43px;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  background-color: $main-accent-color;
+
+  &:hover {
+    color: #000;
+    text-decoration: none;
+    opacity: 0.8;
+  }
+}
+
+.more-info {
+  margin: 38px 5px 0 0;
+  display: inline-block;
+  color: $main-accent-color;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: underline;
+
+  &:hover {
+    color: $main-accent-color;
+    opacity: 0.8;
+  }
+}

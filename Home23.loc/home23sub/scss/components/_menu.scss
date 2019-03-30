@@ -1,0 +1,55 @@
+// Styles for Menus and Navs
+// -----------------------------------------------------------------------------
+.navbar-nav {
+  float: right;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+  font-weight: 700;
+
+  &:hover {
+    color: #fff;
+    opacity: 0.8;
+  }
+}
+
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  background-color: transparent;
+  color: #fff;
+  font-weight: 700;
+
+  &:hover {
+    color: #fff;
+    background-color: transparent;
+    opacity: 0.8;
+  }
+}
+
+.navbar-brand {
+  float: none;
+}
+
+footer .navbar-brand img {
+  filter: invert(100%);
+}
+
+footer .menu.nav {
+  column-count: 2;
+
+  a {
+    border-radius: 4px;
+    font-size: 14px;
+    color: #000;
+
+    &:hover {
+      opacity: 0.8;
+      background-color: $main-color-bg;
+    }
+  }
+}

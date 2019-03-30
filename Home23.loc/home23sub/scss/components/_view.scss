@@ -1,0 +1,101 @@
+// Styles for Views
+// -----------------------------------------------------------------------------
+.pane-posts-block .view-content {
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  @include breakpoint(md) {
+    padding: 40px 100px 40px 40px;
+  }
+}
+
+.families-block .view-content {
+  .views-field-title span {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .views-field-view-node a {
+    padding: 5px 10px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 3px;
+    color: $main-accent-color;
+    background-color: #fff;
+  }
+}
+
+.pagination.pager {
+  float: left;
+
+  a {
+    color: #000;
+    background-color: transparent;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.posts-view {
+  .views-row {
+    @extend .clearfix;
+    padding: 50px 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    .views-field-field-blog-image {
+      @extend .col-md-5;
+      padding-left: 0;
+    }
+  }
+
+  .views-row-first {
+    padding-top: 0;
+  }
+  .views-row-last {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .views-field-title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .views-field-nothing, .views-field-name, .views-field-created {
+    font-size: 14px;
+  }
+
+  .views-field-name {
+    margin-right: 68px;
+  }
+
+  .views-field-view-node a {
+    font-weight: 700;
+    text-decoration: underline;
+    color: $main-accent-color;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.pager li > a, .pager li > span {
+  border: none;
+}
+
+.pagination > .active > span {
+  background-color: $main-accent-color;
+  border-color: $main-accent-color;
+  border-radius: 3px;
+
+  &:hover {
+    border-color: $main-accent-color;
+    background-color: $main-accent-color;
+    opacity: 0.8;
+  }
+}
+

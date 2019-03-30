@@ -1,0 +1,11 @@
+.block-about {
+  background: $main-color-bg url("../../assets/images/bg-about-us.png") 50vw 50% no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  h2 {
+    margin: 0 0 60px 15px;
+    font-size: 40px;
+    font-weight: 900;
+  }
+}

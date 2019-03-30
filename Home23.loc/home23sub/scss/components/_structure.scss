@@ -1,0 +1,17 @@
+// Styles for Tabs, Messages, ..etc
+// -----------------------------------------------------------------------------
+.breadcrumb {
+  margin-bottom: 0;
+  padding: 0;
+  display: inline-block;
+  background-color: transparent;
+  a {
+    color: #a9a9a9;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+
+.visible-desktop {
+  display: inline-block;
+}

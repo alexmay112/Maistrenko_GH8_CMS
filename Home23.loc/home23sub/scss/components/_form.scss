@@ -1,0 +1,22 @@
+// Styles for Forms
+// -----------------------------------------------------------------------------
+.block-form-subscribe {
+  .form-actions input[type="submit"] {
+    height: 45px;
+    font-weight: 700;
+    border-color: $main-accent-color;
+    background-color: $main-accent-color;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .form-control {
+    height: 45px;
+  }
+}
+
+.search-form {
+  margin-bottom: 0;
+}

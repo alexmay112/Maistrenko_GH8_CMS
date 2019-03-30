@@ -1,0 +1,23 @@
+.block-build {
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  //background: url("../../assets/images/build-a-home-image.png") 0 50% no-repeat;
+  background: url("../../../../../default/files/build-a-home-image.png") 0 50% no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 900;
+  }
+
+  p:first-child {
+    width: 100%;
+    margin-bottom: 63px;
+    font-weight: 700;
+    @include breakpoint(md) {
+      width: 40%;
+    }
+  }
+}
