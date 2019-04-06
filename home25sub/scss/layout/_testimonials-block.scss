@@ -1,0 +1,8 @@
+.testimonials-block {
+  background-color: #03b6e7;
+
+  h2::before {
+    content: "Happy clients";
+    display: block;
+  }
+}

@@ -1,0 +1,7 @@
+.follow-block {
+  @extend .col-xs-12, .col-lg-4;
+
+  .content a {
+    display: block;
+  }
+}

@@ -1,0 +1,15 @@
+.steps-block {
+  background-color: #e7eff1;
+
+  h2:before {
+    content: "Our";
+    display: block;
+  }
+
+  .views-field-title {
+    span::before {
+      content: "01";
+      display: block;
+    }
+  }
+}

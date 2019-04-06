@@ -1,0 +1,59 @@
+// Page Layout
+// -----------------------------------------------------------------------------
+body {
+  font-family: Domine, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.block-header {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: Montserrat, sans-serif;
+}
+
+a {
+  display: inline-block;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.content {
+  @extend .clearfix;
+}
+
+.page-header {
+  margin-bottom: 50px;
+  padding: 0;
+  border-bottom: none;
+
+  h1 {
+    padding-left: 27px;
+  }
+}
+
+h1 {
+  padding: 130px 0;
+  background: url("../../assets/images/yellow_circle.png") 0 50% no-repeat;
+}
+
+.title-page {
+  background: #dfe9ec url("../../assets/images/another-bg.png") 70% 50% no-repeat;
+  background-size: cover;
+  @include breakpoint(md) {
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+}
+
+.region-content {
+  margin-top: 50px;
+}
